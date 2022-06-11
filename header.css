@@ -25,36 +25,22 @@
 
 .logo-header__icon {
   width: 80px;
-  -webkit-animation: rotateIcon 4s infinite alternate;
-          animation: rotateIcon 4s infinite alternate;
+  animation: rotateIcon 4s infinite alternate;
 }
+
 .logo-header__icon:hover {
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  animation-duration: 2s;
 }
 
 .logo-header__text {
   width: 150px;
 }
 
-@-webkit-keyframes rotateIcon {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
 @keyframes rotateIcon {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
