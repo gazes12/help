@@ -1,18 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-	<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title></title>
 </head>
 <body>
-    <div class="slider">
-        <div class="slider__line">
-            <div class="slider__item"><img src="img/slider/1.jpg" alt=""></div>
-            <div class="slider__item"><img src="img/slider/2.jpg" alt=""></div>
-            <div class="slider__item"><img src="img/slider/3.jpg" alt=""></div>
-        </div>
-    </div>	
+    <main class="main">
+        <section class="about-us">
+            <div class="about-us__container">
+                <div class="about-us__title">О нас</div>
+                <div class="about-us__sub-title">...</div>
+                <div class="about-us__slider slider">
+                    <i class="fa-solid fa-arrow-right slider__arrow slider__arrow--next"></i>
+                    <div class="slider__wrap">
+                        <div class="slider__line">
+                            <div class="slider__item"><img src="img/slider/1.jpg" alt=""></div>
+                            <div class="slider__item"><img src="img/slider/2.jpg" alt=""></div>
+                            <div class="slider__item"><img src="img/slider/3.jpg" alt=""></div>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-arrow-left slider__arrow slider__arrow--prev"></i>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <script src="script.js"></script>
 </body>
 </html>

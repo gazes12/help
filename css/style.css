@@ -1,0 +1,50 @@
+@import url('all.css');
+
+[class*=__container] {
+  max-width: 1030px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+body {
+  background: #12061C;
+}
+
+.slider {
+	 margin-top: 30px;
+	 display: flex;
+	 align-items: center;
+	 gap: 50px;
+}
+
+ .slider__wrap {
+	 border: 5px solid #fff;
+	 overflow: hidden;
+}
+
+ .slider__line {
+	 display: flex;
+	 transition: 0.3s;
+}
+
+ .slider__item {
+	 height: 500px;
+	 min-width: 100%;
+}
+
+ .slider__item img {
+	 max-width: 100%;
+	 width: 100%;
+	 height: 100%;
+}
+ .slider__arrow {
+ 	color: #fff;
+	 font-size: 70px;
+	 cursor: pointer;
+}
+
+ .slider__arrow.lock {
+	 pointer-events: none;
+	 opacity: 0.3;
+}
+ 
