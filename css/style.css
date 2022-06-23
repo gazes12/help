@@ -1,5 +1,4 @@
-@import url('all.css');
-
+@charset "UTF-8";
 [class*=__container] {
   max-width: 1030px;
   padding: 0 15px;
@@ -8,38 +7,111 @@
 
 body {
   background: #12061C;
+  font-family: "Inter", sans-serif;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
-.slider {
-	 margin-top: 30px;
-	 display: flex;
-	 align-items: center;
-	 gap: 50px;
+.order {
+  margin-top: 3rem;
+  min-height: 300px;
 }
 
- .slider__wrap {
-	 border: 5px solid #fff;
-	 overflow: hidden;
+.order__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 300px;
 }
 
- .slider__line {
-	 display: flex;
-	 transition: 0.3s;
+.order-button {
+  background: #EF3CFF;
+  color: #fff;
+  border-radius: 12px;
+  padding: 1.4rem 4.2rem;
+  font-size: 3rem;
+  width: 50%;
+  height: 100px;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+.order-button:hover {
+  -webkit-box-shadow: 3px 2px 14px 11px #C731D5;
+  box-shadow: 3px 2px 14px 11px #C731D5;
+}
+.order-button:hover .order-button__line--left {
+  left: 90%;
+}
+.order-button:hover .order-button__line--right {
+  right: 90%;
+}
+.order-button:hover .order-button__line--top {
+  top: 90%;
+}
+.order-button:hover .order-button__line--bottom {
+  bottom: 90%;
+}
+.order-button:hover::after {
+  top: 30%;
+}
+.order-button::after {
+  content: "Заказать";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 
- .slider__item {}
+.order-button__line {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 12px;
+  height: 100%;
+  width: 50%;
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
+}
 
- .slider__item img {
-	 max-width: 100%;
-}
- .slider__arrow {
- 	color: #fff;
-	 font-size: 70px;
-	 cursor: pointer;
+.order-button__line--left {
+  left: -100%;
+  top: 0;
+  background: rgb(186, 47, 199);
+  background: linear-gradient(73deg, rgb(186, 47, 199) 30%, rgb(239, 60, 255) 70%);
 }
 
- .slider__arrow.lock {
-	 pointer-events: none;
-	 opacity: 0.3;
+.order-button__line--right {
+  right: -100%;
+  top: 0;
+  background: rgb(239, 60, 255);
+  background: linear-gradient(73deg, rgb(239, 60, 255) 30%, rgb(186, 47, 199) 70%);
 }
- 
+
+.order-button__line--top {
+  top: -100%;
+  left: 50%;
+  background: rgb(239, 60, 255);
+  background: linear-gradient(73deg, rgb(239, 60, 255) 30%, rgb(186, 47, 199) 70%);
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+.order-button__line--bottom {
+  bottom: -100%;
+  left: 50%;
+  background: rgb(186, 47, 199);
+  background: linear-gradient(73deg, rgb(186, 47, 199) 30%, rgb(239, 60, 255) 70%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}

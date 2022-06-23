@@ -1,0 +1,119 @@
+[class*='__container']{
+    max-width: 1000px + 30px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+body{
+    background: #12061C;
+    font-family: 'Inter', sans-serif;
+    transition: all .3s ease-out;
+}
+
+
+
+.order {
+    margin-top: 3rem;
+    min-height: 300px;
+}
+
+.order__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+
+.order-button{
+    background: #EF3CFF;
+    color: #fff;
+    border-radius: 12px;
+    padding: 1.4rem 4.2rem;
+    font-size: 3rem;
+
+    width: 50%;
+    height: 100px;
+
+    position: relative;
+    overflow: hidden;
+
+    transition: all .3s linear;
+    &:hover{
+        -webkit-box-shadow: 3px 2px 14px 11px #C731D5; 
+        box-shadow: 3px 2px 14px 11px #C731D5;
+
+        .order-button__line--left{
+            left: 90%;
+        }
+
+        .order-button__line--right{
+            right: 90%;
+        }
+
+        .order-button__line--top{
+            top: 90%;
+        }
+
+        .order-button__line--bottom{
+            bottom: 90%;
+        }
+
+        &::after{
+            top: 30%;
+        }
+    }
+
+    &::after{
+        content: 'Заказать';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        transition: all .3s linear;
+    }
+}
+
+
+.order-button__line {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+    border-radius: 12px;
+    height: 100%;
+    width: 50%;
+
+    transition: all 1s linear;
+}
+
+.order-button__line--left {
+    left: -100%;
+    top: 0;
+    background: rgb(186,47,199);
+    background: linear-gradient(73deg, rgba(186,47,199,1) 30%, rgba(239,60,255,1) 70%);
+}
+
+.order-button__line--right {
+    right: -100%;
+    top: 0;
+    background: rgb(239,60,255);
+    background: linear-gradient(73deg, rgba(239,60,255,1) 30%, rgba(186,47,199,1) 70%);
+}
+
+.order-button__line--top {
+    top: -100%;
+    left: 50%;
+    background: rgb(239,60,255);
+    background: linear-gradient(73deg, rgba(239,60,255,1) 30%, rgba(186,47,199,1) 70%);
+    transform: translate(-50%);
+}
+
+.order-button__line--bottom {
+    bottom: -100%;
+    left: 50%;
+    background: rgb(186,47,199);
+    background: linear-gradient(73deg, rgba(186,47,199,1) 30%, rgba(239,60,255,1) 70%);
+    transform: translateX(-50%);
+}
